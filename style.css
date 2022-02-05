@@ -1,13 +1,19 @@
-#loginbox {
-	animation: cssAnimation 0s 5s forwards;
-	visibility: hidden;
-}
-  
-@keyframes cssAnimation {
-to   { visibility: visible; }
+@font-face { font-family: HelveticaNeue; src: url('HelveticaNeue.ttc'); } 
+body {
+  background-color: black;
+  font-family: HelveticaNeue;
+  letter-spacing: .5px;
+	/* background-image: url('grunge_patterns.jpg'); */
+	/* background-attachment: fixed; */
+	/* color: #333; */
 }
 
+  
+
+
 .centered {
+  animation: cssAnimation 0s 4.75s forwards;
+	visibility: hidden;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -15,22 +21,96 @@ to   { visibility: visible; }
 	transform: translate(-50%, -50%);
 }
 
+@keyframes cssAnimation {
+  to   { visibility: visible; }
+  }
+
 .center {
+  color: white;
+  font-family: HelveticaNeue;
+  letter-spacing: .25px;
 	text-align: center;
 }
 
-div.picture1 {
-	width:100px; /*width of your image*/
-	height:100px; /*height of your image*/
-	background-image:url('grunge_patterns.jpg');
-	margin:0; /* If you want no margin */
+div#image {
+	width:200px; /*width of your image*/
+	height:200px; /*height of your image*/
+	background-image:url('ddd.jpg');
+  border: 2px solid black;
+  border-radius: 10px;
+	margin-top: 25px; /* If you want no margin */
+	/* margin-bottom: 15px; If you want no margin */
 	padding:0; /*if your want to padding */
- }​
+ }
 
-body {
-	background-image: url('grunge_patterns.jpg');
-	background-attachment: fixed;
-	color: #333;
+ div#image:hover {
+   border: 2px solid white;
+ }
+
+.bottomCenter {
+  position: fixed;
+  left: 50%;
+  bottom: 20%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+
+.enterPassword {
+  letter-spacing: 1px;
+  font-family: HelveticaNeue;
+  position: fixed;
+  left: 50%;
+  bottom: 20%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  border: 2px solid #adadad;
+  background-color: black;
+  color: #adadad;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.enterPassword:hover {
+  border: 2px solid white;
+  color: white;
+}
+
+#passwordBox {
+  visibility: hidden;
+}
+
+.passwordInput {
+  letter-spacing: 1px;
+  border: 2px solid #adadad;
+  background-color: black;
+  color:#adadad;
+  padding:14px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: #adadad;
+  opacity: 1;
+}
+
+.passwordInput:focus {
+  outline:none;
+}
+
+.passwordEnter {
+  letter-spacing: 1px;
+  background-color: white;
+  padding: 10px 28px;
+  border: none;
+  color: black;
+}
+
+.passwordEnter:hover {
+  background-color: #E50914;
+  border: none;
+  color: white;
 }
 
 .box {
